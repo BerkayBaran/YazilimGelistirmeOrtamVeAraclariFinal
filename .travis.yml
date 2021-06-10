@@ -2,4 +2,5 @@ language : java
 script : "mvn -f YazilimOrtamVeAraclariFinalProjesi/pom.xml clean test verify"
 jdk: 
    - openjdk8
-
+after_success:
+   - bash <(curl -s https://codecov.io/bash)
